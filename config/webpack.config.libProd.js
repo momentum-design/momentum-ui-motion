@@ -86,13 +86,5 @@ exports.config = Object.assign({}, baseConfig, {
     ]
   },
   mode: 'production',
-  externals: {
-    d3: {
-      d3: 'd3',
-      root: 'd3',
-      commonjs: 'd3',
-      commonjs2: 'd3',
-      amd: 'd3'
-    }
-  }
+  externals: {}
 });

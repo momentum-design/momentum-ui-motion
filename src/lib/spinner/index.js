@@ -1,7 +1,5 @@
 import mframe from 'mframe';
-const style = `<style type="text/css">
-circle{fill:#7F4FD7;}
-</style>`;
+const style = ``;
 const template =`<svg width="200px" height="200px" viewBox="0 0 200 200">
     <g><circle cx="44" cy="100" r='28'/></g>
     <g><circle cx="100" cy="44" r='28'/></g>
@@ -21,6 +19,10 @@ const _args = {
 };
 
 class Spinner extends HTMLElement {
+
+    static register () {
+        window.customElements.define('mm-spinner', Spinner);
+    }
 
     constructor() {
         super();
@@ -111,8 +113,6 @@ class Spinner extends HTMLElement {
         this.G = this.shadowRoot.querySelectorAll('g');
         this.Circle = this.shadowRoot.querySelectorAll('circle');
 
-        console.log(this.Svg, this.G, this.Circle);
-
         let arg = [{
             dom: this.Svg,
             frames: [
@@ -125,8 +125,6 @@ class Spinner extends HTMLElement {
         .concat(this.buildBallArgs(3));
 
         this.M = mframe(arg);
-
-        console.log(this.hasAttribute('autoplay'));
 
         if(this.hasAttribute('autoplay')) {
             this.M.repeat(Infinity);
@@ -142,4 +140,5 @@ class Spinner extends HTMLElement {
     }
     
 }
-window.customElements.define('mm-spinner', Spinner);
+
+export default Spinner;
