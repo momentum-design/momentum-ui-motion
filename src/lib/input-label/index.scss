@@ -1,0 +1,95 @@
+@import '../colors/settings-base.scss';
+
+.md_input {
+    font-family: 'CiscoSansTTRegular';
+    position: relative;
+    border: 1px solid $md-gray-30;
+    height: 30px;
+    width: 100%;
+    background: $md-white;
+    border-radius: 4px;
+}
+
+.md_input * {
+    font-family: 'CiscoSansTTRegular';
+    font-size: 14px;
+}
+
+.md_input input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 14px;
+    text-indent: 16px;
+    color: $md-gray-100;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.md_input label {
+    position: absolute;
+    top: 8px;
+    left: 17px;
+    height: 18px;
+    line-height: 14px;
+    display: block;
+    color: $md-gray-70;
+    transform-origin: left center;
+    user-select: none;
+}
+
+.md_input i {
+    position: absolute;
+    top: -1px;
+    left: 16px;
+    display: block;
+    width: 0px;
+    height: 1px;
+    background: $md-white;
+}
+
+.md_input a {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 7px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.md_input a>svg {
+    margin: 0px;
+    left: 0px;
+}
+
+.md_input:hover {
+    background: $md-gray-20;
+}
+
+.md_input:hover label {
+    color: $md-gray-100;
+}
+
+.md_input_focus {
+    background: $md-white !important;
+    border-color: $md-blue-60;
+}
+
+.md_input_focus label {
+    color: $md-blue-60 !important;
+}
+
+.md_input_press {
+    background: $md-gray-30 !important;
+    border-color: $md-gray-30;
+}
+
+.md_input_press label {
+    color: $md-gray-100 !important;
+}
+
+.md_input_typed a {
+    display: block;
+}

@@ -1,10 +1,12 @@
-import spinner from './spinner/index';
-import loadingDots from './loading_dots/index';
+import spinner from './spinner';
+import loadingDots from './loading-dots';
+import inputLabel from './input-label';
 
 const MotionUI  = {
     Components: {
         spinner,
-        loadingDots
+        loadingDots,
+        inputLabel
     },
     IfRegister: false,
     registerWindow : function (name, func) {
@@ -16,7 +18,7 @@ const MotionUI  = {
         if(!this.IfRegister) {
             let values = Object.values(this.Components);
             for(let i = 0, l = values.length;i<l;i++) {
-                values[i].register();
+                window.customElements.define(values[i].Tag, values[i]);
             }
             this.IfRegister = true;
         }
