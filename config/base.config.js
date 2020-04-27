@@ -20,8 +20,8 @@ const baseConfig = {
 
   plugins: [
     // Hash the files using MD5 so that their names change when the content changes.
-    new WebpackMd5Hash(),
-    '@babel/plugin-proposal-class-properties'
+    new WebpackMd5Hash()
+    //'@babel/plugin-proposal-class-properties'
   ],
 
   module: {

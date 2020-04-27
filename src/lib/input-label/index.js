@@ -1,24 +1,29 @@
-import css from '!!raw-loader!sass-loader!./index.scss'; 
-import html from '!!raw-loader!./index.html'; 
+import css from '!!raw-loader!sass-loader!./index.scss';
+import html from '!!raw-loader!./index.html';
 import mframe from 'mframe';
 
 class InputLabel extends HTMLElement {
+
+    static register () {
+        window.customElements.define('mm-input-label', this);
+    }
 
     static get observedAttributes() {
         return ['placeholder'];
     }
 
-    constructor() {
+    constructor () {
         super();
-        this.attachShadow({mode: 'open'})
+        this.attachShadow({ mode: 'open' })
         this.shadowRoot.innerHTML = `<style type="text/css">${css}</style>${html}`;
         this.init();
     }
 
     attributeChangedCallback(name, oldVal, newVal) {
-        switch(name) {
+        switch (name) {
             case 'placeholder':
                 this.Dom_hint.innerHTML = newVal;
+                this.initMotion();
                 break;
             default:
                 break;
@@ -27,16 +32,22 @@ class InputLabel extends HTMLElement {
 
     init() {
         this.Dom = this.shadowRoot.querySelector('div');
-        this.Dom_i =this.shadowRoot.querySelector('i');
+        this.Dom_i = this.shadowRoot.querySelector('i');
         this.Dom_hint = this.shadowRoot.querySelector('label');
         this.Dom_input = this.shadowRoot.querySelector('input');
         this.Dom_clear = this.shadowRoot.querySelector('a');
 
-        this.initMotion();
+        if (!this.hasAttribute('placeholder')) {
+            this.initMotion();
+        }
         this.initBind();
     }
 
     initMotion() {
+        if (this.M && this.M.stop) {
+            this.M.stop();
+        }
+
         var w = (this.Dom_hint.clientWidth * 0.7 + 8) >> 0,
             h2 = this.Dom_hint.clientHeight * 0.7 >> 0,
             h = (-this.Dom_hint.clientHeight / 2) >> 0,
@@ -45,7 +56,7 @@ class InputLabel extends HTMLElement {
             left0 = left + w / 2 >> 0,
             left1 = left - 4;
 
-        this.Motion = mframe([{
+        this.M = mframe([{
             dom: this.Dom_i,
             frames: [
                 { css: { left: left0 + 'px', width: '0px' }, time: 0 },
@@ -62,22 +73,22 @@ class InputLabel extends HTMLElement {
     }
 
     initBind() {
-        this.Dom_input.addEventListener('focus', (e)=> {
+        this.Dom_input.addEventListener('focus', (e) => {
             this._focus(e);
         });
-        this.Dom_input.addEventListener('blur', (e)=> {
+        this.Dom_input.addEventListener('blur', (e) => {
             this._blur(e);
         });
-        this.Dom_input.addEventListener('keyup', (e)=> {
+        this.Dom_input.addEventListener('keyup', (e) => {
             this._keyup(e);
         });
-        this.Dom_input.addEventListener('mouseup', (e)=> {
+        this.Dom_input.addEventListener('mouseup', (e) => {
             this._mouseup(e);
         });
-        this.Dom_input.addEventListener('mousedown', (e)=> {
+        this.Dom_input.addEventListener('mousedown', (e) => {
             this._mousedown(e);
         });
-        this.Dom_clear.addEventListener('click', (e)=> {
+        this.Dom_clear.addEventListener('click', (e) => {
             this.Dom_input.value = '';
             this.removeClass(this.Dom, 'md_input_typed');
             this.Dom_input.focus();
@@ -88,7 +99,7 @@ class InputLabel extends HTMLElement {
         return this.Dom_input.value.replace(/\r\n\t\s/g, '') === '';
     }
 
-    removeClass (dom, className) {
+    removeClass(dom, className) {
         var _reg = new RegExp('(\\s|\\t|\\n|\\r|^)' + className + '(?=\\s|\\t|\\n|\\r|$)', 'g');
         dom.className = dom.className.replace(_reg, "");
     }
@@ -101,8 +112,8 @@ class InputLabel extends HTMLElement {
     _focus() {
         this.addClass(this.Dom, 'md_input_focus');
         if (this.isEmpty()) {
-            this.Motion.pause();
-            this.Motion.play();
+            this.M.pause();
+            this.M.play();
         }
     }
 
@@ -111,7 +122,7 @@ class InputLabel extends HTMLElement {
     }
 
     _mousedown() {
-        if(!this.isEmpty()) {
+        if (!this.isEmpty()) {
             this.addClass(this.Dom, 'md_input_press');
         }
     }
@@ -127,12 +138,10 @@ class InputLabel extends HTMLElement {
     _blur() {
         this.removeClass(this.Dom, 'md_input_focus');
         if (this.isEmpty()) {
-            this.Motion.pause();
-            this.Motion.reverse();
+            this.M.pause();
+            this.M.reverse();
         }
     }
 }
-
-InputLabel.Tag = 'mm-input-label';
 
 export default InputLabel;

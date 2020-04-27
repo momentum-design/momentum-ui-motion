@@ -4,6 +4,10 @@ import mframe from 'mframe';
 
 class LoadingDots extends HTMLElement {
 
+    static register () {
+        window.customElements.define('mm-loading-dots', this);
+    }
+
     static get observedAttributes() {
         return ['size', 'colors', 'autoplay'];
     }
@@ -43,7 +47,6 @@ class LoadingDots extends HTMLElement {
                 }
             }
             this.Colors = arr;
-            console.log(arr);
             this.initMotion();
         }
     }
@@ -121,7 +124,5 @@ class LoadingDots extends HTMLElement {
     }
 
 }
-
-LoadingDots.Tag = 'mm-loading-dots';
 
 export default LoadingDots;

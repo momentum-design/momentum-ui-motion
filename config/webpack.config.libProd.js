@@ -86,5 +86,13 @@ exports.config = Object.assign({}, baseConfig, {
     ]
   },
   mode: 'production',
-  externals: {}
+  externals: {
+    mframe: {
+      mframe: 'mframe',
+      root: 'mframe',
+      commonjs: 'mframe',
+      commonjs2: 'mframe',
+      amd: 'mframe'
+    }
+  }
 });

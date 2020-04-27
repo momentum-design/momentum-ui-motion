@@ -14,6 +14,10 @@ const TIMELINE = {
 
 class Spinner extends HTMLElement {
 
+    static register () {
+        window.customElements.define('mm-spinner', this);
+    }
+
     static get observedAttributes() {
         return ['size', 'colors', 'autoplay'];
     }
@@ -161,7 +165,5 @@ class Spinner extends HTMLElement {
     }
 
 }
-
-Spinner.Tag = 'mm-spinner';
 
 export default Spinner;

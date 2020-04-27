@@ -14,11 +14,11 @@ const MotionUI  = {
             window[name] = func;
         }
     },
-    register: function() {
+    registerAll: function() {
         if(!this.IfRegister) {
             let values = Object.values(this.Components);
             for(let i = 0, l = values.length;i<l;i++) {
-                window.customElements.define(values[i].Tag, values[i]);
+                values[i].register();
             }
             this.IfRegister = true;
         }
@@ -26,6 +26,14 @@ const MotionUI  = {
 }
 
 MotionUI.registerWindow('momentum_ui_motion', MotionUI);
-MotionUI.register();
+MotionUI.registerWindow('mframe-components', MotionUI);
+
+if(document && document.addEventListener) {
+    document.addEventListener('DOMContentLoaded',function(){
+        MotionUI.registerAll();
+    });
+} else {
+    MotionUI.registerAll();
+}
 
 export default momentum_ui_motion;
