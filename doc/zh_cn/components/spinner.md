@@ -11,16 +11,10 @@ date: 2020/4/27 12:00:00
 
 #### 用法
 
+<!--#html1#-->
 ```
 <mm-spinner autoplay></mm-spinner>
 ```
-
-<!--@
-<iframe height="176" style="width: 100%;" scrolling="no" title="spinner " src="https://codepen.io/arthusliang/embed/VwvbWav?height=176&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
-  See the Pen <a href='https://codepen.io/arthusliang/pen/VwvbWav'>spinner </a> by Arthus
-  (<a href='https://codepen.io/arthusliang'>@arthusliang</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-@-->
 
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/VwvbWav)
 
@@ -58,16 +52,12 @@ date: 2020/4/27 12:00:00
 
 ### 设置尺寸和颜色
 
+#### 用法
+
+<!--#html2#-->
 ```
 <mm-spinner size='200' colors='#0A78CC|#5EBFF7' autoplay></mm-spinner>
 ```
-
-<!--@
-<iframe height="311" style="width: 100%;" scrolling="no" title="spinner-props" src="https://codepen.io/arthusliang/embed/JjYNJKP?height=311&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
-  See the Pen <a href='https://codepen.io/arthusliang/pen/JjYNJKP'>spinner-props</a> by Arthus
-  (<a href='https://codepen.io/arthusliang'>@arthusliang</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-@-->
 
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/JjYNJKP)
 
@@ -75,17 +65,11 @@ date: 2020/4/27 12:00:00
 
 你可以设置颜色循环，mframe会生成过度的颜色(有时候会是黑色), 请谨慎测试使用。
 
+#### 用法
+
+<!--#html3#-->
 ```
 <mm-spinner size='100' colors='#875AE0|#C7A5FA@#D43B52|#FC97AA@#0A78CC|#5EBFF7@#148579|#30C9B0@#7D7A18|#B4BA43@#C74F0E|#FF9D52' autoplay></mm-spinner>
 ```
 
-<!--@
-<iframe height="223" style="width: 100%;" scrolling="no" title="spinner-colors" src="https://codepen.io/arthusliang/embed/mdemwEO?height=223&theme-id=light&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true" loading="lazy">
-  See the Pen <a href='https://codepen.io/arthusliang/pen/mdemwEO'>spinner-colors</a> by Arthus
-  (<a href='https://codepen.io/arthusliang'>@arthusliang</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-@-->
-
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/mdemwEO)
-
-
