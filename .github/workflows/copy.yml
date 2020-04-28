@@ -11,7 +11,24 @@ on:
       - 'doc/**'
 name: Copy Md
 jobs:
+  jobBundles:
+    name: Copy Bundles
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: copyTo
+      uses: andstor/copycat-action@v2.0.0
+      with:
+        personal_token: ${{ secrets.www }}
+        src_path: bundles/.
+        dst_path: /themes/momentum/source/lib/momentum_ui_motion
+        dst_owner: momentum-design
+        dst_repo_name: blog
+        clean: true
+        username: yulhuang
+        email: yulhuang@cisco.com
   jobZH:
+    needs: jobBundles
     name: Copy Chinese Documents
     runs-on: ubuntu-latest
     steps:
