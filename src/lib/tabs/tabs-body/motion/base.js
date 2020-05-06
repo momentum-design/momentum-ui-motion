@@ -1,6 +1,6 @@
 import Core from '../../../utility/core';
 
-const AllClass = ['fade', 'swipe', 'scroll-a', 'scroll-v'];
+const AllClass = ['tabs_fade', 'tabs_swipe', 'scroll-a', 'scroll-v'];
 
 class Base {
 

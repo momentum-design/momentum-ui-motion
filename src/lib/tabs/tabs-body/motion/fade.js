@@ -10,7 +10,7 @@ class Fade extends Base {
     }
 
     initDom() {
-        this.switchClass('fade');
+        this.switchClass('tabs_fade');
     }
 
     getMotion(from, to) {

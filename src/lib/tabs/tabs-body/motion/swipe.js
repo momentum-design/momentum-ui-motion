@@ -9,7 +9,7 @@ class Swipe extends Base {
     }
 
     initDom() {
-        this.switchClass('swipe');
+        this.switchClass('tabs_swipe');
         var per = 0.2,
             leave_t0 = 0,
             leave_t1 = 20,

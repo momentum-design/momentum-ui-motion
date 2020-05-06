@@ -13,7 +13,7 @@
 
 }
 
-:host(.fade) {
+:host(.tabs_fade) {
 
     ::slotted(mm-tabs-body-item){
         position: absolute;
@@ -23,7 +23,7 @@
 
 }
 
-:host(.swipe) {
+:host(.tabs_swipe) {
 
     ::slotted(mm-tabs-body-item){
         position: absolute;
