@@ -1,5 +1,6 @@
 import css from '!!raw-loader!sass-loader!./index.scss';
 import html from '!!raw-loader!./index.html';
+import Core from '../utility/core';
 import mframe from 'mframe';
 
 class InputLabel extends HTMLElement {
@@ -90,7 +91,7 @@ class InputLabel extends HTMLElement {
         });
         this.Dom_clear.addEventListener('click', (e) => {
             this.Dom_input.value = '';
-            this.removeClass(this.Dom, 'md_input_typed');
+            Core.removeClass(this.Dom, 'md_input_typed');
             this.Dom_input.focus();
         });
     }
@@ -99,18 +100,8 @@ class InputLabel extends HTMLElement {
         return this.Dom_input.value.replace(/\r\n\t\s/g, '') === '';
     }
 
-    removeClass(dom, className) {
-        var _reg = new RegExp('(\\s|\\t|\\n|\\r|^)' + className + '(?=\\s|\\t|\\n|\\r|$)', 'g');
-        dom.className = dom.className.replace(_reg, "");
-    }
-
-    addClass(dom, className) {
-        var _reg = new RegExp('(\\s|\\t|\\n|\\r|^)' + className + '(?=\\s|\\t|\\n|\\r|$)');
-        if (!_reg.test(dom.className)) dom.className += " " + className;
-    }
-
     _focus() {
-        this.addClass(this.Dom, 'md_input_focus');
+        Core.addClass(this.Dom, 'md_input_focus');
         if (this.isEmpty()) {
             this.M.pause();
             this.M.play();
@@ -118,25 +109,25 @@ class InputLabel extends HTMLElement {
     }
 
     _mouseup() {
-        this.removeClass(this.Dom, 'md_input_press');
+        Core.removeClass(this.Dom, 'md_input_press');
     }
 
     _mousedown() {
         if (!this.isEmpty()) {
-            this.addClass(this.Dom, 'md_input_press');
+            Core.addClass(this.Dom, 'md_input_press');
         }
     }
 
     _keyup() {
         if (this.isEmpty()) {
-            this.removeClass(this.Dom, 'md_input_typed');
+            Core.removeClass(this.Dom, 'md_input_typed');
         } else {
-            this.addClass(this.Dom, 'md_input_typed');
+            Core.addClass(this.Dom, 'md_input_typed');
         }
     }
 
     _blur() {
-        this.removeClass(this.Dom, 'md_input_focus');
+        Core.removeClass(this.Dom, 'md_input_focus');
         if (this.isEmpty()) {
             this.M.pause();
             this.M.reverse();

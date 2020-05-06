@@ -1,3 +1,5 @@
+@import '../lib/colors/settings-base.scss';
+
 .ball{
     display: block;
     border-radius: 50%;
@@ -13,3 +15,25 @@
     display: block;
     margin: 20px 0 0 20px;
 }
+
+.placeholder_block {
+    display: block;
+    width: 280px;
+    height: 280px;
+    line-height: 280px;
+    margin: 10px;
+    text-align: center;
+    color: $md-white;
+    background-color: $md-gray-30;
+    border-radius: 30px;
+    font-size: 100px;
+}
+
+.bg_placeholder_theme {
+    background-color: $md-cobalt-30;
+}
+
+.bg_placeholder_violet {
+    background-color: $md-violet-30;
+}
+

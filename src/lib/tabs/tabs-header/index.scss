@@ -1,0 +1,96 @@
+@import '../../colors/settings-base.scss';
+$text_size: 34px;
+$text_padding: 34px;
+$border_radius: 4px;
+$border_radius_circle:18px;
+
+:host {
+    display: inline-block;
+    height: $text_size;
+    zoom:1;
+    border-radius: $border_radius;
+
+    &:after{
+        content:"";
+        height:0;
+        line-height:0;
+        display:block;
+        visibility:hidden;
+        clear:both;
+    }
+
+    ::slotted(mm-tabs-header-item){
+        display: block;
+        color:$md-black;
+        background-color: $md-white;
+        height: $text_size;
+        line-height: $text_size;
+        float: left;
+        padding: 0 $text_padding;
+        position: relative;
+        border: 1px solid $md-gray-20;
+        border-left: none!important;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    ::slotted(mm-tabs-header-item:first-child){
+        border-left: 1px solid $md-gray-20!important;
+        border-radius: $border_radius 0 0 $border_radius;
+    }
+    
+    ::slotted(mm-tabs-header-item:last-child){
+        border-radius:0 $border_radius $border_radius 0;
+    }
+    
+    ::slotted(mm-tabs-header-item:hover){
+        background-color: $md-gray-10;
+    }
+    
+    ::slotted(.current){
+        background-color: $md-blue-10;
+    }
+    
+    ::slotted(.pressed){
+        background-color: $md-gray-20!important;
+    }
+}
+
+:host(.circle) {
+    border-radius: $border_radius_circle;
+
+    ::slotted(mm-tabs-header-item:first-child){
+        border-radius: $border_radius_circle 0 0 $border_radius_circle;
+    }
+
+    ::slotted(mm-tabs-header-item:last-child){
+        border-radius:0 $border_radius_circle $border_radius_circle 0;
+    }
+}
+
+:host(.dark) {
+
+    ::slotted(mm-tabs-header-item) {
+        color: $md-gray-05;
+        background-color: $md-gray-90;
+        border: 1px solid $md-gray-70;
+    }
+
+    ::slotted(mm-tabs-header-item:first-child){
+        border-left: 1px solid $md-gray-70!important;
+    }
+
+    ::slotted(mm-tabs-header-item:hover){
+        color: $md-gray-05;
+        background-color: $md-gray-80;
+    }
+    
+    ::slotted(.current){
+        color: $md-gray-100;
+        background-color: $md-white;
+    }
+    
+    ::slotted(.pressed){
+        background-color: $md-gray-70!important;
+    }
+}

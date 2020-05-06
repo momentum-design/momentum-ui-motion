@@ -1,0 +1,63 @@
+:host {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    .shim {
+        position: relative;
+    }
+
+    ::slotted(mm-tabs-body-item){
+        display: block;
+    }
+
+}
+
+:host(.fade) {
+
+    ::slotted(mm-tabs-body-item){
+        position: absolute;
+        top:0px;
+        left: 0px;
+    }
+
+}
+
+:host(.swipe) {
+
+    ::slotted(mm-tabs-body-item){
+        position: absolute;
+        top:0px;
+        left: 0px;
+    }
+}
+
+:host(.scroll-v) {
+
+    ::slotted(mm-tabs-body-item){
+        position: relative;
+        top:0px!important;
+        left: 0px!important;
+    }
+
+}
+
+:host(.scroll-a) {
+
+    ::slotted(mm-tabs-body-item){
+        display: block;
+        position: relative;
+        top:0px!important;
+        left: 0px!important;
+        float: left;
+    }
+
+    ::slotted:after{
+        content:"";
+        height:0;
+        line-height:0;
+        display:block;
+        visibility:hidden;
+        clear:both;
+    } 
+}

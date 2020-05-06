@@ -18,7 +18,7 @@ date: 2020/4/27 12:00:00
 
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/VwvbWav)
 
-### 属性
+### 特性
 
 + autoplay
 
@@ -34,7 +34,7 @@ date: 2020/4/27 12:00:00
 
 	设置尺寸. 默认值```60```.
 
-### Method
+### 方法
 
 + play
 

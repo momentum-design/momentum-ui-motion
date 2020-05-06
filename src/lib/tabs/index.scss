@@ -1,0 +1,84 @@
+@import '../colors/settings-base.scss';
+$text_size: 36px;
+$text_padding: 36px;
+$icon_size: 32px;
+$icon_padding: 0px;
+/*
+mm-tabs-header{
+    display: block;
+    border: 1px solid $md-gray-20;
+    background-color: $md-white;
+    height: $text_size;
+}
+
+:host(.current){
+    display: block;
+    background-color: red;
+}
+:host-context(.current) {
+    display: block;
+    background-color: red;
+}
+
+:host(mm-tabs-header-item){
+    display: inline-block;
+    color:$md-black;
+    background-color: $md-white;
+    height: $text_size;
+    line-height: $text_size;
+    padding: 0 $text_padding;
+}
+
+mm-tabs-header-item:hover{
+    background-color: $md-gray-10;
+    border: 1px solid $md-gray-20;
+}
+
+mm-tabs-header >.pressed{
+    background-color: $md-gray-20;
+    border: 1px solid $md-gray-30;
+}
+
+mm-tabs-header >.current{
+    color: $md-white;
+    background-color: $md-gray-60;
+    border: 1px solid $md-gray-70;
+}
+
+mm-tabs-body{
+    display: block;
+}
+
+mm-tabs-body-item{
+    display: inline-block;
+}
+
+.dark{
+    mm-tabs-header{
+        background-color: #EDEDED;
+        border: 1px solid #DEDEDE;
+    }
+    
+    mm-tabs-header-item{
+        display: inline-block;
+        color:$md-black;
+        background-color: $md-white;
+    }
+    
+    mm-tabs-header-item:hover{
+        background-color: $md-gray-10;
+        border: 1px solid $md-gray-20;
+    }
+    
+    mm-tabs-header >.pressed{
+        background: $md-gray-20;
+        border: 1px solid $md-gray-30;
+    }
+    
+    mm-tabs-header >.current{
+        color: $md-white;
+        background: $md-gray-60;
+        border: 1px solid $md-gray-70;
+    }
+}
+*/

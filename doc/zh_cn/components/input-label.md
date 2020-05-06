@@ -18,13 +18,13 @@ date: 2020/4/27 14:00:00
 
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/KKdmqPQ)
 
-### 属性
+### 特性
 
 + placeholder
 
 	设置hint文本.
 	
-### 特性
+### 属性
 
 + Dom_input
 	

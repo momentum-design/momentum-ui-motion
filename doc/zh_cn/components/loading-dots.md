@@ -18,7 +18,7 @@ date: 2020/4/27 11:00:00
 
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/BaoRRxz)
 
-### 属性
+### 特性
 
 + autoplay
 

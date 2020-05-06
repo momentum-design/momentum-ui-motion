@@ -1,13 +1,16 @@
-import spinner from './spinner';
-import loadingDots from './loading-dots';
-import inputLabel from './input-label';
+import Spinner from './spinner';
+import LoadingDots from './loading-dots';
+import InputLabel from './input-label';
+import Tabs from './tabs';
+
+const Components = [
+    Spinner,
+    LoadingDots,
+    InputLabel
+].concat(Tabs);
 
 const MotionUI  = {
-    Components: {
-        spinner,
-        loadingDots,
-        inputLabel
-    },
+    Components: Components,
     IfRegister: false,
     registerWindow : function (name, func) {
         if (typeof window !== 'undefined' && window[name] === undefined) {
@@ -16,9 +19,8 @@ const MotionUI  = {
     },
     registerAll: function() {
         if(!this.IfRegister) {
-            let values = Object.values(this.Components);
-            for(let i = 0, l = values.length;i<l;i++) {
-                values[i].register();
+            for(let i = 0, l = this.Components.length;i<l;i++) {
+                this.Components[i].register();
             }
             this.IfRegister = true;
         }
