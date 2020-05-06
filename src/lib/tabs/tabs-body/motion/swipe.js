@@ -15,9 +15,13 @@ class Swipe extends Base {
             leave_t1 = 20,
             enter_t0 = 0,
             enter_t1 = 24;
+
         if(this.Config.direction === 'a') {
             var w  = this.Con.clientWidth>>0,
                 plus = w * per >> 0;
+            this.Items.forEach((item)=>{
+                item.style.width = w + 'px';
+            });
             this._Persents = {
                 leave: {
                     min: [
@@ -43,6 +47,9 @@ class Swipe extends Base {
         } else {
             var h  = this.Con.clientHeight>>0,
                 plus = h * per >> 0;
+            this.Items.forEach((item)=>{
+                item.style.height = h + 'px';
+            });
             this._Persents = {
                 leave: {
                     min: [

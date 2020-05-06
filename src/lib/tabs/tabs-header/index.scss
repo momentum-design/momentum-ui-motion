@@ -26,7 +26,7 @@ $border_radius_circle:18px;
         height: $text_size;
         line-height: $text_size;
         float: left;
-        padding: 0 $text_padding;
+        padding: 0 $text_padding!important;
         position: relative;
         border: 1px solid $md-gray-20;
         border-left: none!important;
