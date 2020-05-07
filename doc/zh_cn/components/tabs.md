@@ -103,9 +103,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
 
 ### motion特性
 
-+ undefined
+#### undefined
 
-#### 例
+##### 例
 
 <!--#html1#-->
 ```
@@ -123,9 +123,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
 </mm-tabs>
 ```
 
-+ fade
+#### fade
 
-#### 例
+##### 例
 
 <!--#html2#-->
 ```
@@ -143,9 +143,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
 </mm-tabs>
 ```
 
-+ swipe-a
+#### swipe-a
 
-#### 例
+##### 例
 
 <!--#html3#-->
 ```
@@ -163,9 +163,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
 </mm-tabs>
 ```
 
-+ swipe-v
+#### swipe-v
 
-#### 例
+##### 例
 
 <!--#html4#-->
 ```
@@ -183,9 +183,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
 </mm-tabs>
 ```
 
-+ scroll-a
+#### scroll-a
 
-#### 例
+##### 例
 
 <!--#html5#-->
 ```
@@ -203,9 +203,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
 </mm-tabs>
 ```
 
-+ scroll-v
+#### scroll-v
 
-#### 例
+##### 例
 
 <!--#html6#-->
 ```
