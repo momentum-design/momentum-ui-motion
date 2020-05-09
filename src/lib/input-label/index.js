@@ -10,7 +10,16 @@ class InputLabel extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['placeholder'];
+        return ['placeholder', 'value'];
+    }
+
+    get value() {
+        return this.Dom_input.value;
+    }
+
+    set value(value) {
+        this.Dom_input.value = value;
+        this._keyup();
     }
 
     constructor () {
@@ -25,6 +34,9 @@ class InputLabel extends HTMLElement {
             case 'placeholder':
                 this.Dom_hint.innerHTML = newVal;
                 this.initMotion();
+                break;
+            case 'value':
+                this.value = newVal;
                 break;
             default:
                 break;

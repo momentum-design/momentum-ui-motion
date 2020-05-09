@@ -2,11 +2,13 @@ import Spinner from './spinner';
 import LoadingDots from './loading-dots';
 import InputLabel from './input-label';
 import Tabs from './tabs';
+import Toggle from './toggle';
 
 const Components = [
     Spinner,
     LoadingDots,
-    InputLabel
+    InputLabel,
+    Toggle
 ].concat(Tabs);
 
 const MotionUI  = {

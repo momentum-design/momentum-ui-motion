@@ -1,4 +1,3 @@
-import css from '!!raw-loader!sass-loader!./index.scss';
 import TabsHeader from './tabs-header';
 import TabsHeaderItem from './tabs-header-item';
 import TabsBody from './tabs-body';
@@ -18,7 +17,7 @@ class Tabs extends HTMLElement {
     constructor () {
         super();
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `<style type="text/css">${css}</style><slot></slot>`;
+        this.shadowRoot.innerHTML = `<slot></slot>`;
         this.init();
     }
 

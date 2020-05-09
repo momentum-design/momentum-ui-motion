@@ -6,13 +6,26 @@ var Core = {
         return v.toString(16);
       });
     },
+    getRegClass(className) {
+      return new RegExp('(\\s|\\t|\\n|\\r|^)' + className + '(?=\\s|\\t|\\n|\\r|$)', 'g');
+    },
+    trim(str) {
+      return this.trimStart(this.trimEnd(str));
+    },
+    trimStart(str) {
+      return str.replace(/^\s+/,'');
+    },
+    trimEnd(str) {
+      return str.replace(/\s+$/,'');
+    },
     removeClass(dom, className) {
-        var _reg = new RegExp('(\\s|\\t|\\n|\\r|^)' + className + '(?=\\s|\\t|\\n|\\r|$)', 'g');
-        dom.className = dom.className.replace(_reg, "");
+      var _reg = this.getRegClass(className);
+      dom.className = this.trim(dom.className.replace(_reg, ""));
     },
     addClass(dom, className) {
-        var _reg = new RegExp('(\\s|\\t|\\n|\\r|^)' + className + '(?=\\s|\\t|\\n|\\r|$)');
-        if (!_reg.test(dom.className)) dom.className += " " + className;
+        var _reg = this.getRegClass(className),
+          _str = dom.className;
+        if (!_reg.test(_str)) dom.className = this.trimEnd(_str) + " " + className;
     },
     each: function (elem, funcName, args) {
       var length = elem.length;

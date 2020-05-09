@@ -1,0 +1,113 @@
+@import '../colors/settings-base.scss';
+
+:host {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: $md-gray-30;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color .2s ease;
+
+    a {
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        left: 2px;
+        top: 2px;
+        background: $md-white;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.16);
+        border-radius: 32px;
+        transition: left .2s ease,
+            background-color .2s ease;
+    }
+
+}
+
+:host(:hover) {
+    background-color: $md-gray-40;
+}
+
+:host(.pressed) {
+    background-color: $md-gray-50!important;
+}
+
+:host(.disable) {
+    background-color: $md-gray-10!important;
+
+    a{
+        background-color: $md-gray-05;
+        box-shadow: none;
+    }
+}
+
+:host(.on) {
+    background-color: $md-blue-50;
+
+    a{
+        left: 18px;
+    }
+
+}
+
+:host(.on:hover) {
+    background-color: $md-blue-60;
+}
+
+:host(.on_pressed) {
+    background-color: $md-blue-70!important;
+}
+
+:host(.on_disable) {
+    background-color: $md-blue-10!important;
+}
+
+:host(.dark) {
+    background-color: $md-gray-60;
+}
+
+:host(.dark:hover) {
+    background-color: $md-gray-40;
+} 
+
+:host(.dark_pressed) {
+    background-color: $md-gray-30!important;
+}
+
+:host(.dark_disable) {
+    background-color: $md-gray-90!important;
+
+    a{
+        background-color: $md-gray-70;
+        box-shadow: none;
+    }
+}
+
+:host(.dark_on) {
+    background-color: $md-blue-50;
+
+    a{
+        left: 18px;
+    }
+}
+
+:host(.dark_on:hover) {
+    background-color: $md-blue-60;
+}
+
+:host(.dark_on_pressed) {
+    background-color: $md-blue-70!important;
+
+}
+
+:host(.dark_on_disable) {
+    background-color: $md-blue-90!important;
+
+    a{
+        background-color: $md-gray-05;
+        box-shadow: none;
+    }
+}
