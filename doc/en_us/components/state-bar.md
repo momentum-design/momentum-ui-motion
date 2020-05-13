@@ -1,6 +1,6 @@
 <!-- 
 ---
-date: 2020/5/13 14:10:00
+date: 2020/5/13 14:20:00
 ---
 -->
 # state-bar
@@ -88,7 +88,7 @@ Emit when the hiding animation ends.
 <!--#html3#-->
 ```
 <a onclick="javascript:document.getElementById('testBar2').show()">show</a>
-<mm-state-bar colors='#707070@#875AE1@#D3DB7B' id='testBar2' autoplay>
+<mm-state-bar colors='#52DCFF@#875AE1@#999923' id='testBar2' autoplay>
     <a onclick="javascript:document.getElementById('testBar2').hide()">hide</a>
     <a onclick="javascript:document.getElementById('testBar2').next()">next</a>
 </mm-state-bar>

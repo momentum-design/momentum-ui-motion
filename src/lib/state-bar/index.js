@@ -21,7 +21,7 @@ class StateBar extends HTMLElement {
         this.Content = this.shadowRoot.querySelector('.state-bar-content');
         this.init();
     }
- 
+
     init() {
         this.Events = new Events();
         this.Colors = ['#99DDFF', '#30C9B0'];
@@ -32,18 +32,18 @@ class StateBar extends HTMLElement {
         this.Motion.show = mframe([{
             dom: this,
             frames: [
-                { 
+                {
                     time: 0,
-                    css: { 
+                    css: {
                         display: 'block',
-                        opacity: 1, 
+                        opacity: 1,
                         'background-image': () => {
                             return this._lgc(this.Colors[0], '0.0', 'rgba(255,255,255,0)');
                         }
                     }
-                }, { 
+                }, {
                     time: 30,
-                    css: { 
+                    css: {
                         'background-image': () => {
                             return this._lgc(this.Colors[0], '100.0', 'rgba(255,255,255,0)');
                         }
@@ -98,11 +98,17 @@ class StateBar extends HTMLElement {
     }
 
     initState() {
-        let colors = this.Colors;
-        for (var i = 0, l = colors.length - 1; i < l; i++) {
-            this._initStateMotion(i, i+1, colors[i], colors[i + 1]);
+        var colors = this.Colors,
+            l = colors.length,
+            i, j;
+        for (i = 0; i < l; i++) {
+            for (j = 0; j < l; j++) {
+                if (i !== j) {
+                    this._initStateMotion(i, j, colors[i], colors[j]);
+                }
+            }
         }
-        if(this.NeedAutoPlay && !this.HasPlayed) {
+        if (this.NeedAutoPlay && !this.HasPlayed) {
             this.HasPlayed = true;
             this.show();
         }
@@ -113,11 +119,11 @@ class StateBar extends HTMLElement {
         this.Motion.state[key] = mframe([{
             dom: this,
             frames: [
-                { time: 0, css: { 'background-image': this._lgc(color2, '0', color1) } },
+                { time: 0, css: { 'background-image': this._lgc(color2, '0.0', color1) } },
                 { time: 30, css: { 'background-image': this._lgc(color2, '100.0', color1) } }
             ]
         }], {
-            end: ()=> {
+            end: () => {
                 this._StateIndex = to;
                 this.Events.emit('state', [this._StateIndex]);
             }
@@ -126,14 +132,14 @@ class StateBar extends HTMLElement {
 
     state(to) {
         var key = this._getKey(this._StateIndex, to);
-        if(this.Motion.state[key]) {
+        if (this.Motion.state[key]) {
             this.Motion.state[key].stop();
             this.Motion.state[key].play();
         }
     }
 
     next() {
-        var to = this._StateIndex < this.Colors.length - 1 ?  this._StateIndex+1 : 0;
+        var to = this._StateIndex < this.Colors.length - 1 ? this._StateIndex + 1 : 0;
         this.state(to);
     }
 
