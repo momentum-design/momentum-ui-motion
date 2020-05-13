@@ -85,7 +85,7 @@ Emit when the hiding animation ends.
 
 ### Set colors
 
-<!--#html3****#-->
+<!--#html3#-->
 ```
 <a onclick="javascript:document.getElementById('testBar2').show()">show</a>
 <mm-state-bar colors='#707070@#875AE1@#D3DB7B' id='testBar2' autoplay>
