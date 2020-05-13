@@ -76,10 +76,10 @@ document.getElementById('input-label-id').bind('hide', function(i) {
 
 <!--#html2#-->
 ```
-<button onclick="javascript:document.getElementById('testBar').show()">show</button>
+<a onclick="javascript:document.getElementById('testBar').show()">show</a>
 <mm-state-bar id='testBar' autoplay>
-    <button onclick="javascript:document.getElementById('testBar').hide()">hide</button>
-    <button onclick="javascript:document.getElementById('testBar').next()">next</button>
+    <a onclick="javascript:document.getElementById('testBar').hide()">hide</a>
+    <a onclick="javascript:document.getElementById('testBar').next()">next</a>
 </mm-state-bar>
 ```
 
@@ -87,9 +87,9 @@ document.getElementById('input-label-id').bind('hide', function(i) {
 
 <!--#html3****#-->
 ```
-<button onclick="javascript:document.getElementById('testBar2').show()">show</button>
+<a onclick="javascript:document.getElementById('testBar2').show()">show</a>
 <mm-state-bar colors='#707070@#875AE1@#D3DB7B' id='testBar2' autoplay>
-    <button onclick="javascript:document.getElementById('testBar2').hide()">hide</button>
-    <button onclick="javascript:document.getElementById('testBar2').next()">next</button>
+    <a onclick="javascript:document.getElementById('testBar2').hide()">hide</a>
+    <a onclick="javascript:document.getElementById('testBar2').next()">next</a>
 </mm-state-bar>
 ```
