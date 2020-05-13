@@ -59,6 +59,39 @@ var Core = {
         p = p.parentNode;
       }
       return null;
+    },
+    findChildrenByTagName: function(dom, tag, eachFunc) {
+      var children = dom.children,
+        ret = [];
+        for (var i = 0, l = children.length; i < l; i++) {
+            if(children[i].tagName.toLowerCase()===tag){
+                eachFunc && eachFunc(children[i], i);
+                ret.push(children[i]);
+            }
+        }
+        return ret;
+    },
+    // #666|#333@#666|#444
+    getArraySets: function(val, def) {
+        var arr = [];
+        if (typeof val === 'string') {
+            var groups = val.split('@'),
+                hasInside = false,
+                arr = [];
+            if (groups.length<=1) {
+              return def;
+            }
+
+            for (var i = 0, l = groups.length; i < l; i++) {
+                var item = groups[i].split('|');
+                if (item.length > 1) {
+                  hasInside = true;
+                  arr.push(item);
+                }
+            }
+            return hasInside ? arr : groups;
+        }
+        return def;
     }
   };
   
