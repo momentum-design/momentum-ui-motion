@@ -4,6 +4,7 @@ import InputLabel from './input-label';
 import Tabs from './tabs';
 import Toggle from './toggle';
 import StateBar from './state-bar';
+import Control from './control';
 
 const Components = [
     Spinner,
@@ -11,7 +12,7 @@ const Components = [
     InputLabel,
     Toggle,
     StateBar
-].concat(Tabs);
+].concat(Tabs).concat(Control);
 
 const MotionUI  = {
     Components: Components,

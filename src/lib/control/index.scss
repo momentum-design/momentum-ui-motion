@@ -1,0 +1,179 @@
+@import '../colors/settings-base.scss';
+$btn_height: 52px;
+$btm_padding: 16px;
+$inner_margin_left: 8px;
+$half_btn_height: 26px;
+
+:host {
+    display: inline-block;
+    height: $btn_height;
+    line-height: $btn_height;
+    border-radius: $half_btn_height;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+
+    &:after{
+        content:"";
+        height:0;
+        line-height:0;
+        display:block;
+        visibility:hidden;
+        clear:both;
+    }
+
+    .control-content {
+        height: $btn_height;
+        line-height: $btn_height;
+        border-radius: $half_btn_height;
+        padding: 0 16px;
+        background-color: $md-gray-70;
+        color: $md-white;
+    }
+
+    .control-content:hover {
+        background-color: $md-gray-80;
+    }
+
+    .control-content_pressed {
+        background-color: $md-gray-90!important;
+    }
+
+    .control-content_disabled {
+        color: $md-gray-70;
+        background-color: $md-gray-90;
+    }
+
+    ::slotted(mm-control-state){
+        height: $btn_height;
+        line-height: $btn_height;
+        position: relative;
+        float: left;
+    }
+
+    ::slotted(mm-control-arrow){
+        margin:4px 0px 4px 8px;
+        display: block;
+        width: 16px;
+        height: $btn_height - 8px;
+        line-height: $btn_height - 8px - 2px;
+        float: right;
+    }
+
+    ::slotted(mm-control-text){
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,"Helvetica Neue",Arial,sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        height: $btn_height;
+        line-height: $btn_height;
+        margin-left: 8px;
+        display: block;
+        float: left;
+    }
+
+    ::slotted(mm-control-icon) {
+        height: $btn_height;
+        line-height: $btn_height - 2px;
+        display: block;
+        float: left;
+    }
+
+    ::slotted(.wide) {
+        padding:0 10px;
+    }
+}
+
+:host(.light) {
+
+    box-shadow: 0px 3.07692px 6.15385px rgba(0, 0, 0, 0.2), 0px 1.53846px 3.07692px rgba(0, 0, 0, 0.2);
+
+    .control-content {
+        background-color: $md-gray-20;
+        color: $md-gray-100;
+    }
+
+    .control-content:hover {
+        background-color: $md-gray-30;
+    }
+
+    .control-content_pressed {
+        background-color: $md-gray-40!important;
+    }
+
+    .control-content_disabled {
+        color: $md-gray-40;
+        background-color: $md-gray-20;
+    }
+}
+
+:host(.green) {
+
+    .control-content {
+        background-color: $md-green-60;
+    }
+
+    .control-content:hover {
+        background-color: $md-green-70;
+    }
+
+    .control-content_pressed {
+        background-color: $md-green-80!important;
+    }
+
+}
+
+:host(.red) {
+    .control-content {
+        background-color: $md-red-60;
+    }
+
+    .control-content:hover {
+        background-color: $md-red-70;
+    }
+
+    .control-content_pressed {
+        background-color: $md-red-80!important;
+    }
+}
+
+:host(.blue) {
+    .control-content {
+        background-color: $md-blue-60;
+    }
+
+    .control-content:hover {
+        background-color: $md-blue-70;
+    }
+
+    .control-content_pressed {
+        background-color: $md-blue-80!important;
+    }
+}
+
+:host(.split) {
+
+    .control-content{
+        padding-right: 4px;
+    }
+
+    ::slotted(mm-control-arrow){
+        margin-left: 4px;
+        width: 26px;
+        border-radius: 6px 38px 38px 6px;
+        text-align: center;
+
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    ::slotted(mm-control-arrow:hover){
+        background-color: $md-gray-90;
+    }
+
+    ::slotted(.control-arrow_pressed){
+        background-color: $md-gray-90;
+    }
+}
