@@ -5,13 +5,15 @@ import Tabs from './tabs';
 import Toggle from './toggle';
 import StateBar from './state-bar';
 import Control from './control';
+import LoadingBreakout from './loading-breakout';
 
 const Components = [
     Spinner,
     LoadingDots,
     InputLabel,
     Toggle,
-    StateBar
+    StateBar,
+    LoadingBreakout
 ].concat(Tabs).concat(Control);
 
 const MotionUI  = {
