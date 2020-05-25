@@ -28,7 +28,7 @@ date: 2020/5/27 11:00:00
 
 + size
 
-	Set the size of the component. Default is ```27```.
+	Set the size of the component. Default is ```28```.
 
 ### Method
 
