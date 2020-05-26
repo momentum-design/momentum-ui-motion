@@ -166,8 +166,10 @@ class StateBar extends HTMLElement {
     }
 
     setColors(val) {
-        this.Colors = Core.getArraySets(val, this.Colors, 2);
-        this.initState();
+        if (typeof val === 'string') {
+            this.Colors = Core.propArray(val, this.Colors, 2);
+            this.initState();
+        }
     }
 
 }

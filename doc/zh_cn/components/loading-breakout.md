@@ -24,7 +24,7 @@ date: 2020/5/27 11:00:00
 
 + colors
 
-	设置颜色，使用 ```@```分割。默认的是```#FC9D03```。
+	设置颜色，使用 ```|```分割。默认的是```#FC9D03```。
 
 + size
 
@@ -63,5 +63,5 @@ date: 2020/5/27 11:00:00
 
 <!--#html3#-->
 ```
-<mm-loading-breakout colors='#52DCFF@#31E88C@#FFC14F@#FFBBAD' autoplay></mm-loading-breakout>
+<mm-loading-breakout colors='#52DCFF|#31E88C|#FFC14F|#FFBBAD' autoplay></mm-loading-breakout>
 ```

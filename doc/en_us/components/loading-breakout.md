@@ -24,7 +24,7 @@ date: 2020/5/27 11:00:10
 
 + colors
 
-	Set colors of the icon. Use ```@``` to split. Default is ```#FC9D03```.
+	Set colors of the icon. Use ```|``` to split. Default is ```#FC9D03```.
 
 + size
 
@@ -63,5 +63,5 @@ You can set any colors for each rect inside the icon.
 
 <!--#html3#-->
 ```
-<mm-loading-breakout colors='#52DCFF@#31E88C@#FFC14F@#FFBBAD' autoplay></mm-loading-breakout>
+<mm-loading-breakout colors='#52DCFF|#31E88C|#FFC14F|#FFBBAD' autoplay></mm-loading-breakout>
 ```

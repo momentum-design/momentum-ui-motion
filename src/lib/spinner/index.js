@@ -1,5 +1,6 @@
 import html from '!!raw-loader!./index.html';
 import mframe from 'mframe';
+import Core from '../utility/core';
 
 const TIMELINE = {
     endtime: [0, 76, 58, 41],
@@ -47,15 +48,7 @@ class Spinner extends HTMLElement {
 
     setColors(val) {
         if (typeof val === 'string') {
-            var groups = val.split('@'),
-                arr = [];
-            for (var i = 0, l = groups.length; i < l; i++) {
-                var item = groups[i].split('|');
-                if (item.length > 1) {
-                    arr.push(item);
-                }
-            }
-            this.Colors = arr;
+            this.Colors = Core.propArray(val, this.Colors, 2);
             this.initMotion();
         }
     }

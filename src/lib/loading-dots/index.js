@@ -1,5 +1,6 @@
 import css from '!!raw-loader!sass-loader!./index.scss';
 import html from '!!raw-loader!./index.html';
+import Core from '../utility/core';
 import mframe from 'mframe';
 
 class LoadingDots extends HTMLElement {
@@ -14,7 +15,7 @@ class LoadingDots extends HTMLElement {
 
     constructor () {
         super();
-        this.Colors = [['#875AE0', '#C7A5FA']];
+        this.Colors = [['#00A0D1', '#07C1F5']];
         this.attachShadow({ mode: 'open' })
         this.shadowRoot.innerHTML = `<style type="text/css">${css}</style>${html}`;
         this.init();
@@ -38,15 +39,7 @@ class LoadingDots extends HTMLElement {
 
     setColors(val) {
         if (typeof val === 'string') {
-            var groups = val.split('@'),
-                arr = [];
-            for (var i = 0, l = groups.length; i < l; i++) {
-                var item = groups[i].split('|');
-                if (item.length > 1) {
-                    arr.push(item);
-                }
-            }
-            this.Colors = arr;
+            this.Colors = Core.propArray(val, this.Colors, 2);
             this.initMotion();
         }
     }
@@ -56,14 +49,14 @@ class LoadingDots extends HTMLElement {
         this.Svg.setAttribute('height', val + 'px');
     }
 
-    buildDotsFrame(x0, t0, colorIndex) {
+    buildDotsFrame(t0, colorIndex) {
         return [
-            { attr: { fill: this.Colors[colorIndex][0] }, time: t0 },
-            { attr: { fill: this.Colors[colorIndex][1] }, time: t0 + 15, tween: 'easeInOut' },
-            { attr: { fill: this.Colors[colorIndex][0] }, time: t0 + 30, tween: 'easeInOut' },
-            { attr: { r: '12.0', cx: x0 }, time: t0 },
-            { attr: { r: '28.8', cx: x0 + 17 }, time: t0 + 15, tween: 'easeInOut' },
-            { attr: { r: '12.0', cx: x0 }, time: t0 + 65, tween: 'easeOut' }
+            { attr: { fill: this.Colors[colorIndex][0] }, time: t0 + 35},
+            { attr: { fill: this.Colors[colorIndex][1] }, time: t0 + 55, tween: 'easeInOut' },
+            { attr: { fill: this.Colors[colorIndex][0] }, time: t0 + 80, tween: 'easeInOut' },
+            { attr: { r: '13.0', cy: '55.0' }, time: t0 },
+            { attr: { r: '14.56', cy: '29.0' }, time: t0 + 25, tween: 'easeInOut' },
+            { attr: { r: '13.0', cy: '55.0' }, time: t0 + 55, tween: 'easeInOut' }
         ]
     }
 
@@ -93,14 +86,13 @@ class LoadingDots extends HTMLElement {
         for (; i < l; i++) {
             base = step * i;
             svgFrame = svgFrame.concat([
-                { css: { transform: 'rotateY(0deg)' }, time: 10 + base },
-                { css: { transform: 'rotateY(1.0deg)' }, time: 40 + base },
-                { css: { transform: 'rotateY(-1.0deg)' }, time: 70 + base },
-                { css: { transform: 'rotateY(0.0deg)' }, time: 100 + base }
+                { css: { transform: 'translateY(0.0px)' }, time: 0 + base },
+                { css: { transform: 'translateY(-4.0px)' }, time: 40 + base, tween: 'easeInOut' },
+                { css: { transform: 'translateY(0.0px)' }, time: 100 + base, tween: 'easeInOut' }
             ]);
-            circleFrame0 = circleFrame0.concat(this.buildDotsFrame(60, base + 0, i));
-            circleFrame1 = circleFrame1.concat(this.buildDotsFrame(100, base + 15, i));
-            circleFrame2 = circleFrame2.concat(this.buildDotsFrame(140, base + 30, i));
+            circleFrame0 = circleFrame0.concat(this.buildDotsFrame(base + 0, i));
+            circleFrame1 = circleFrame1.concat(this.buildDotsFrame(base + 10, i));
+            circleFrame2 = circleFrame2.concat(this.buildDotsFrame(base + 20, i));
         }
 
         this.M = mframe([

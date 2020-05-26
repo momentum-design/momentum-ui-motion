@@ -1,4 +1,7 @@
 var Core = {
+  isArray: function (pObj) {
+    return Object.prototype.toString.call(pObj) === '[object Array]';
+  },
   guid: function () {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = Math.random() * 16 | 0;
@@ -71,26 +74,31 @@ var Core = {
     }
     return ret;
   },
-  // #666|#333@#666|#444
-  getArraySets: function (val, def, min) {
+  split : function(signal, val, def, min) {
     var arr = [],
       min = min || 1;
-    if (typeof val === 'string') {
-      var groups = val.split('@'),
-        hasInside = false,
-        arr = [];
-      if (groups.length < min) {
-        return def;
-      }
-
-      for (var i = 0, l = groups.length; i < l; i++) {
-        var item = groups[i].split('|');
-        if (item.length >= min) {
-          hasInside = true;
-          arr.push(item);
+    if(typeof val === 'string') {
+      var groups = val.split(signal);
+      return groups.length < min ? def : groups;
+    }
+    return def;
+  },
+  // #666|#333@#666|#444
+  propArray: function(val, def, min) {
+    if(this.isArray(def)) {
+      if(this.isArray(def[0])) {
+        var groups = val.split('@'),
+          ret=[],
+          idx=0,
+          i,l=groups.length;
+        for(i=0;i<l;i++) {
+          idx = l % def.length;
+          ret.push(this.split('|', groups[i], def[idx], min));
         }
+        return ret;
+      } else {
+        return this.split('|', val, def, min);
       }
-      return hasInside ? arr : groups;
     }
     return def;
   }

@@ -28,11 +28,13 @@ class LoadingBreakout extends HTMLElement {
     }
 
     setColors(val) {
-        this.Colors = Core.getArraySets(val, this.Colors, 1);
-        for (var i = 0; i < 4; i++) {
-            var _idx = i % this.Colors.length;
-            this.Rect[i*2].setAttribute('stroke', this.Colors[_idx]);
-            this.Rect[i*2 + 1].setAttribute('fill', this.Colors[_idx]);
+        if (typeof val === 'string') {
+            this.Colors = Core.propArray(val, this.Colors, 1);
+            for (var i = 0; i < 4; i++) {
+                var _idx = i % this.Colors.length;
+                this.Rect[i*2].setAttribute('stroke', this.Colors[_idx]);
+                this.Rect[i*2 + 1].setAttribute('fill', this.Colors[_idx]);
+            }
         }
     }
 

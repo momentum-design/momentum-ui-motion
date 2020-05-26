@@ -32,7 +32,7 @@ date: 2020/4/27 11:00:00
 
 + size
 
-	Set the size of loading-dots. Default is ```60```.
+	Set the size of loading-dots. Default is ```110```.
 
 ### Method
 
