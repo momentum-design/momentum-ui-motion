@@ -87,7 +87,7 @@ class LoadingDots extends HTMLElement {
             base = step * i;
             svgFrame = svgFrame.concat([
                 { css: { transform: 'translateY(0.0px)' }, time: 0 + base },
-                { css: { transform: 'translateY(-4.0px)' }, time: 40 + base, tween: 'easeInOut' },
+                { css: { transform: 'translateY(4.0px)' }, time: 40 + base, tween: 'easeInOut' },
                 { css: { transform: 'translateY(0.0px)' }, time: 100 + base, tween: 'easeInOut' }
             ]);
             circleFrame0 = circleFrame0.concat(this.buildDotsFrame(base + 0, i));
