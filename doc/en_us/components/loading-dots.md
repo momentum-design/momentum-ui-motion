@@ -34,6 +34,10 @@ date: 2020/4/27 11:00:00
 
 	Set the size of loading-dots. Default is ```110```.
 
++ speed
+	
+	Set speed of the animation. The total animation duration will be multiplied by the number you passed.
+
 ### Method
 
 + play
@@ -74,4 +78,13 @@ You can set any colors in the loop. mframe will generator the color between 2 co
 
 [Click here to try this demo online](https://codepen.io/arthusliang/pen/qBOmmzz)
 
+### Set speed
 
+You can the speed of the animation. The total animation duration will be multiplied by the number you passed.
+
+#### Usage
+
+<!--#html4#-->
+```
+<mm-loading-dots size='100' speed='0.5' autoplay></mm-loading-dots>
+```

@@ -37,7 +37,7 @@
     "snapshotSerializers": []
   },
   "dependencies": {
-    "mframe": "^1.1.7"
+    "mframe": "^1.2.0"
   },
   "peerDependencies": {
     "core-js": "^3.1.4"

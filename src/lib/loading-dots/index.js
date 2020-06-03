@@ -10,7 +10,7 @@ class LoadingDots extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['size', 'colors', 'autoplay'];
+        return ['size', 'colors', 'autoplay','speed'];
     }
 
     constructor () {
@@ -32,8 +32,17 @@ class LoadingDots extends HTMLElement {
                 break;
             case 'autoplay':
                 break;
+            case 'speed':
+                this.setSpeed(newVal);
+                break;
             default:
                 break;
+        }
+    }
+
+    setSpeed(val) {
+        if(this.M && typeof val === 'number') {
+            this.M.speed(val);
         }
     }
 
@@ -95,15 +104,17 @@ class LoadingDots extends HTMLElement {
             circleFrame2 = circleFrame2.concat(this.buildDotsFrame(base + 20, i));
         }
 
-        this.M = mframe([
+        this.M = mframe.speed([
             { dom: this.Svg, frames: svgFrame },
             { dom: this.Circle[0], frames: circleFrame0 },
             { dom: this.Circle[1], frames: circleFrame1 },
             { dom: this.Circle[2], frames: circleFrame2 }
-        ]);
+        ], undefined, [0.5,0.75]);
 
         if (this.hasAttribute('autoplay')) {
             this.M && this.M.repeat(Infinity);
+            var _speed = parseFloat(this.getAttribute('speed')) || 1;
+            this.M.speed(_speed);
         }
 
         this.export();
@@ -111,6 +122,7 @@ class LoadingDots extends HTMLElement {
 
     export() {
         this.play = this.M.play;
+        this.speed = this.M.speed;
         this.stop = this.M.stop;
         this.pause = this.M.pause;
     }

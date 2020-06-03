@@ -34,6 +34,10 @@ date: 2020/4/27 11:00:00
 
 	设置尺寸. 默认值```110```.
 
++ speed
+	
+	设置动画的速度。动画的总播时间会乘以传入的参数。
+
 ### 方法
 
 + play
@@ -73,3 +77,15 @@ date: 2020/4/27 11:00:00
 ```
 
 [点击这里体验在线实例](https://codepen.io/arthusliang/pen/qBOmmzz)
+
+
+### 设置速度
+
+你可以传入speed来设置速度。推进0.5，0.75。
+
+#### Usage
+
+<!--#html4#-->
+```
+<mm-loading-dots size='100' speed='0.5' autoplay></mm-loading-dots>
+```
