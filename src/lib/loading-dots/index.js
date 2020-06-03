@@ -41,8 +41,9 @@ class LoadingDots extends HTMLElement {
     }
 
     setSpeed(val) {
-        if(this.M && typeof val === 'number') {
-            this.M.speed(val);
+        let _v = parseFloat(val) || 1;
+        if(this.M) {
+            this.M.speed(_v);
         }
     }
 
