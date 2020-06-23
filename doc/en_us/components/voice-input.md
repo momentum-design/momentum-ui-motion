@@ -14,10 +14,10 @@ date: 2020/6/23 11:00:10
 <!--#html1#-->
 ```
 <p>
-<a onclick="javascript:document.getElementById('voice-input').start()">show</a>
-<a onclick="javascript:document.getElementById('voice-input').end()">end</a>
+<a onclick="javascript:document.getElementById('voice-input0').start()">show</a>
+<a onclick="javascript:document.getElementById('voice-input0').end()">end</a>
 </p>
-<mm-voice-input id='voice-input'></mm-voice-input>
+<mm-voice-input id='voice-input0'></mm-voice-input>
 ```
 
 ### Attribute
