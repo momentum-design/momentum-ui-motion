@@ -6,6 +6,7 @@ import Toggle from './toggle';
 import StateBar from './state-bar';
 import Control from './control';
 import LoadingBreakout from './loading-breakout';
+import VoiceInput from './voice-input';
 
 const Components = [
     Spinner,
@@ -13,7 +14,8 @@ const Components = [
     InputLabel,
     Toggle,
     StateBar,
-    LoadingBreakout
+    LoadingBreakout,
+    VoiceInput
 ].concat(Tabs).concat(Control);
 
 const MotionUI  = {

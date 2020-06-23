@@ -21,9 +21,9 @@ date: 2020/5/06 12:00:00
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
     <mm-tabs-header class='dark circle'>
         <mm-tabs-header-item>A</mm-tabs-header-item>
@@ -116,9 +116,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
 </mm-tabs>
 ```
@@ -136,9 +136,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body motion="fade" style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
 </mm-tabs>
 ```
@@ -156,9 +156,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body motion="swipe-a" style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
 </mm-tabs>
 ```
@@ -176,9 +176,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body motion="swipe-v" style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
 </mm-tabs>
 ```
@@ -196,9 +196,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body motion="scroll-a" style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
 </mm-tabs>
 ```
@@ -216,9 +216,9 @@ document.getElementById('myTab').Events.bind('onSelect', (index) => {} );
         <mm-tabs-header-item>C</mm-tabs-header-item>
     </mm-tabs-header>
     <mm-tabs-body motion="scroll-v" style="height:300px; width:400px;">
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.pooGjMy.small.408ac9ea-d1a7-4e59-883d-3f7f5e8e5cea.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.WNNPQdB.small.f055475d-6b11-4100-a267-5cb14a62dfa1.png' /></mm-tabs-body-item>
-        <mm-tabs-body-item><img style="width: 400px;" src='https://screenshot.codepen.io/3315115.gOOZRrj.small.20bb896d-af73-480d-9bba-e1b78fecf666.png' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/faq.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/project.svg' /></mm-tabs-body-item>
+        <mm-tabs-body-item><img style="width: 400px;" src='https://uxccds.github.io/img/20170808/experimental.svg' /></mm-tabs-body-item>
     </mm-tabs-body>
 </mm-tabs>
 ```
